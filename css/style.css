@@ -4,12 +4,12 @@
    共通
 ========================= */
 :root{
-  --navy: #0b2a4a;        /* メイン：ネイビー */
-  --navy2:#123b66;        /* 少し明るいネイビー */
-  --sky:  #eaf2fb;        /* 薄い青 */
-  --line: #c7d5e6;        /* 罫線 */
-  --text: #1c2b3a;        /* 文字 */
-  --muted:#4a5b6b;        /* サブ文字 */
+  --n: #91c8ff;      
+  --navy2:#67a8ef;       
+  --sky:  #eaf2fb;        
+  --line: #c7d5e6;        
+  --text: #1c2b3a;        
+  --muted:#4a5b6b;        
   --white:#ffffff;
 }
 
