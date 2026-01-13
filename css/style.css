@@ -222,3 +222,13 @@ img{ max-width: 100%; }
 
   .about{ margin: 4.5rem auto 0; }
 }
+/* ===== ナビ：現在ページを強調 ===== */
+.main-nav a.is-current{
+  border-bottom: 3px solid #ffffff;
+  opacity: 1;
+}
+
+.main-nav a.is-current:hover{
+  border-bottom: 3px solid #ffffff;
+  opacity: 1;
+}
