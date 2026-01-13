@@ -4,14 +4,15 @@
    共通
 ========================= */
 :root{
-  --nsvy: #1c456f;      
-  --navy2:#366ca5;       
-  --sky:  #eaf2fb;        
-  --line: #c7d5e6;        
-  --text: #1c2b3a;        
-  --muted:#4a5b6b;        
+  --navy: #1c456f;        /* ← 修正（nsvyじゃなくnavy） */
+  --navy2:#366ca5;
+  --sky:  #eaf2fb;
+  --line: #c7d5e6;
+  --text: #1c2b3a;
+  --muted:#4a5b6b;
   --white:#ffffff;
 }
+
 
 html{ font-size: 100%; }
 
@@ -232,3 +233,7 @@ img{ max-width: 100%; }
   border-bottom: 3px solid #ffffff;
   opacity: 1;
 }
+.main-nav a:not(.is-current):hover{
+  border-bottom: 2px solid #ffffff;
+}
+
