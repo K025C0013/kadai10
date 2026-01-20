@@ -237,3 +237,15 @@ img{ max-width: 100%; }
   border-bottom: 2px solid #ffffff;
 }
 
+/* Home メイン写真 */
+.home-photo{
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+}
+
+.home-photo img{
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+
