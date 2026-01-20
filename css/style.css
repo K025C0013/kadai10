@@ -201,32 +201,6 @@ img{ max-width: 100%; }
 
 }
 
-/* Home 写真背景 */
-.home-photo{
-  max-width: 100%;
-  padding: 3.5rem 1.5rem;
-  margin: 0 auto 3rem;
-
-  /* ベース */
-  background-color: #f7f3ea;
-
-  /* 模様 */
-  background-image:
-    radial-gradient(circle at 8% 20%, rgba(54,108,165,.10) 0 240px, transparent 241px),
-    radial-gradient(circle at 92% 30%, rgba(28,69,111,.08) 0 260px, transparent 261px);
-}
-
-/* 真ん中*/
-.home-photo img{
-  max-width: 900px;
-  width: 100%;
-  margin: 0 auto;
-  display: block;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.15);
-}
-
-
 /* Home メイン写真 */
 .home-photo{
   max-width: 900px;
