@@ -250,4 +250,14 @@ img{ max-width: 100%; }
   border-bottom: 2px solid #ffffff;
 }
 
+  /* Home メイン写真（デスクトップ版） */
+  .home-photo{
+    max-width: 1040px;   /* PCは広め */
+    margin: 0 auto 3rem; /* 下の余白を少し増やす */
+  }
+
+  .home-photo img{
+    border-radius: 24px;
+  }
+
 
