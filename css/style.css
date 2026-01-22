@@ -52,9 +52,16 @@ img{ max-width:100%; display:block; }
 
 .heading-large{
   font-size:2.6rem;
-  margin:3rem 0 1.5rem;
+  margin:3rem 0 1.2rem;
   text-align:center;
   color:var(--navy);
+}
+
+/* セクション説明文（追加） */
+.section-lead{
+  max-width:820px;
+  margin:0 auto 1.3rem;
+  color:var(--muted);
 }
 
 /* =========================
@@ -86,6 +93,7 @@ img{ max-width:100%; display:block; }
 }
 .main-nav a.is-current{
   border-bottom:3px solid #fff;
+  opacity:1;
 }
 .main-nav a:not(.is-current):hover{
   border-bottom:2px solid #fff;
@@ -100,6 +108,28 @@ img{ max-width:100%; display:block; }
   flex-direction:column;
   justify-content:space-between;
   background:var(--navy);
+  background-size:cover;
+  background-position:center;
+  position:relative;
+}
+
+/* cover-about を「意味あるクラス」に（写真入れる前は青グラデ） */
+.cover-about{
+  background:
+    linear-gradient(135deg, rgba(28,69,111,.98), rgba(54,108,165,.88));
+}
+
+/* タイトルが読みやすいように薄い暗幕（全cover共通） */
+.cover::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to bottom, rgba(0,0,0,.20), rgba(0,0,0,.05));
+  pointer-events:none;
+}
+.cover > *{
+  position:relative;
+  z-index:1;
 }
 
 /* =========================
@@ -135,27 +165,38 @@ img{ max-width:100%; display:block; }
   grid-template-columns:repeat(3,1fr);
   gap:14px;
 }
+
+/* figure/figcaption（文字は写真の下） */
+.about-gallery figure{
+  margin:0;
+}
+
 .about-gallery img{
+  width:100%;
   aspect-ratio:4/3;
   object-fit:cover;
   border-radius:14px;
   box-shadow:0 10px 24px rgba(0,0,0,.12);
+  transition:transform .25s, box-shadow .25s;
 }
 
-.about-gallery figure{
-  margin: 0;
+/* ちょいオシャレ：ホバーで軽くズーム（任意だけど入れてる） */
+.about-gallery figure:hover img{
+  transform:scale(1.02);
+  box-shadow:0 14px 30px rgba(0,0,0,.16);
 }
 
 .about-gallery figcaption{
-  margin-top: .6rem;
-  font-size: .95rem;
-  font-weight: 700;
-  color: var(--text);
-  text-align: center;
+  margin-top:.6rem;
+  font-size:.95rem;
+  font-weight:700;
+  color:var(--text);
+  text-align:center;
 }
 
-
-/* 表 */
+/* =========================
+   表
+========================= */
 .info{
   width:100%;
   max-width:920px;
@@ -165,10 +206,17 @@ img{ max-width:100%; display:block; }
   border:1px solid var(--line);
   border-radius:14px;
   overflow:hidden;
+  background:#fff;
 }
 .info th,.info td{
   padding:1rem 1.2rem;
   border-bottom:1px solid var(--line);
+  text-align:left;
+  vertical-align:top;
+}
+.info tr:last-child th,
+.info tr:last-child td{
+  border-bottom:none;
 }
 .info th{
   width:28%;
@@ -176,21 +224,33 @@ img{ max-width:100%; display:block; }
   font-weight:700;
 }
 
-/* マップ */
+/* info-guide（必要なら微調整できるように定義） */
+.info-guide td{
+  line-height:1.7;
+}
+
+/* =========================
+   マップ
+========================= */
 .map-card{
   max-width:920px;
   margin:2.5rem auto 0;
   border-radius:16px;
   overflow:hidden;
   border:1px solid var(--line);
+  box-shadow:0 10px 24px rgba(0,0,0,.10);
+  background:#fff;
 }
 .map-card iframe{
   width:100%;
   height:360px;
   border:0;
+  display:block;
 }
 
-/* フッター */
+/* =========================
+   フッター
+========================= */
 .page-footer{
   margin-top:5rem;
   background:#f4f8fe;
@@ -229,7 +289,9 @@ img{ max-width:100%; display:block; }
   .map-card iframe{ height:420px; }
 }
 
+/* スマホ最適化 */
 @media (max-width:700px){
   .about-gallery{ grid-template-columns:repeat(2,1fr); }
+  .heading-large{ font-size:2.1rem; }
+  .info th{ width:36%; }
 }
-
