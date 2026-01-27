@@ -113,13 +113,25 @@ img{ max-width:100%; display:block; }
   position:relative;
 }
 
-/* cover-about を「意味あるクラス」に（写真入れる前は青グラデ） */
+/* cover-home */
+/* Home も青グラデにする */
+.cover-home{
+  background:
+    linear-gradient(135deg, rgba(28,69,111,.98), rgba(54,108,165,.88));
+}
+
+/*cover-Highlights */
+.cover-highlights{
+  background:
+    linear-gradient(135deg, rgba(28,69,111,.98), rgba(79,127,184,.88));
+}
+
+/* cover-about */
 .cover-about{
   background:
     linear-gradient(135deg, rgba(28,69,111,.98), rgba(54,108,165,.88));
 }
 
-/* タイトルが読みやすいように薄い暗幕（全cover共通） */
 .cover::after{
   content:"";
   position:absolute;
