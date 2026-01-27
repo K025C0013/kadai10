@@ -294,4 +294,4 @@ img{ max-width:100%; display:block; }
   .about-gallery{ grid-template-columns:repeat(2,1fr); }
   .heading-large{ font-size:2.1rem; }
   .info th{ width:36%; }
-}
+} 
