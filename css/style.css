@@ -264,6 +264,24 @@ img{ max-width:100%; display:block; }
   margin-top:3rem;
 }
 
+.cover-highlights{
+  background: linear-gradient(135deg, #1c456f, #4f7fb8);
+  height:520px;
+}
+
+.about img{
+  max-width:900px;
+  margin:1.5rem auto 1rem;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.about p{
+  margin-bottom:3rem;
+  font-size:1.05rem;
+}
+
+
 /* =========================
    デスクトップ
 ========================= */
