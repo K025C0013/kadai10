@@ -56,7 +56,7 @@ img{ max-width:100%; display:block; }
 }
 
 /* =========================
-   ヘッダー / ナビ（修正版）
+   ヘッダー / ナビ
 ========================= */
 .page-header{
   padding-top:1rem;
@@ -79,7 +79,7 @@ img{ max-width:100%; display:block; }
 
 .main-nav{
   display:flex;
-  justify-content:flex-end; /* ←中央寄せをやめる */
+  justify-content:flex-end; 
   gap:2rem;
   list-style:none;
   margin:0;
